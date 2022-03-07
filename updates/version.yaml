@@ -1,0 +1,8 @@
+1.0.1:
+    - Initialize plugin.
+    - Create quizzes table
+    - Create questions table
+    - Create answers table
+    - create_quizzes_table.php
+    - create_questions_table.php
+    - create_answers_table.php

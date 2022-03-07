@@ -1,0 +1,22 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    question:
+        label: Pytanie
+        searchable: true
+    image_list:
+        type: partial
+        path: ~/plugins/ips/quiz/models/question/_image_column.htm
+        label: Obraz pytania
+        relation: question_image
+        sortable: false
+    quiz:
+        select: name
+        relation: quiz
+        label: Quiz
+        sortable: true

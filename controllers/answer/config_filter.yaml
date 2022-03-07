@@ -1,0 +1,19 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+
+    question:
+
+        # Filter name
+        label: Pytanie
+
+        # Model Class name
+        modelClass: Ips\Quiz\Models\Question
+
+        # Model attribute to display for the name
+        nameFrom: question
+
+        # Apply query scope
+        scope: FilterQuestions

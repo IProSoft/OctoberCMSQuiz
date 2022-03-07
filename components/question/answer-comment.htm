@@ -1,0 +1,10 @@
+{% if answer_comment %}
+<div class="bs-callout bs-callout-info" id="answer-comment-inner">
+<h4>Kommentar</h4>
+{{ answer_comment | raw | md }}
+</div>
+{% endif %}
+<script>
+var math = document.getElementById("answer-comment-inner");
+MathJax.Hub.Queue(["Typeset",MathJax.Hub,math]);
+</script>

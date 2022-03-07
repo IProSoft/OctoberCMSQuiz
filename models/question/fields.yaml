@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    quiz:
+        type: relation
+        commentAbove: 'Pytanie do quizu:'
+    question:
+        label: Pytanie
+        type: textarea
+        language: small
+    question_image:
+        label: Obraz pytania
+        type: fileupload
+        mode: image
+        imageWidth: 800
+        thumbOptions:
+          mode: auto
+          quality: 90
+          interlace: false
+          extension: jpg

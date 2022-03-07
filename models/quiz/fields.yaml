@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Tytuł
+        size: small
+        required: true
+    description:
+        label: Opis
+        type: textarea
+        size: small
+    comment:
+        label: Tekst wyświetlany po zakończeniu quizu
+        type: textarea
+        language: medium

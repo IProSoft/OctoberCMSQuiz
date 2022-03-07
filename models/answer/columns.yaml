@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    question:
+        select: question
+        relation: question
+        label: Pytanie
+        sortable: true
+    answer_text:
+        label: Odpowiedź
+    image_list:
+        type: partial
+        path: ~/plugins/ips/quiz/models/answer/_image_column.htm
+        label: Obraz odpowiedzi
+        relation: answer_image
+        sortable: false
+    correct:
+        type: switch
+        label: Poprawna?

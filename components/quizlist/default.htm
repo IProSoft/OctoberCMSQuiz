@@ -1,0 +1,15 @@
+<div class="list-group">
+    {% for quiz in __SELF__.quizzes %}
+        <div class="list-group-item" href="/quiz/{{quiz.id}}">
+            <h4 class="text-primary">
+                {{ quiz.name }}
+            </h4>
+            <p class="list-group-item-text">{{quiz.description_html|raw}}</p>
+            <a class="btn btn-md btn-primary" href="/question/{{quiz.id}}/1">
+            <i class="fa fa-list"></i> Till frågorna
+            </a>
+
+
+        </div>
+    {% endfor %}
+</div>

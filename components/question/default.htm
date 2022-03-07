@@ -1,0 +1,49 @@
+
+<h2>{{__SELF__.question.name}}</h2>
+
+<p>
+{{__SELF__.question.comment | md }}
+</p>
+
+{% for answer in __SELF__.question.answers.shuffle() %}
+    <a
+        class="btn btn-md btn-info btn-block"
+        data-request-data="answer: '{{answer.id}}'"
+        data-request="{{__SELF__}}::onGrade"
+        data-request-success="updateButtons(data, $el)"
+        data-request-update="'{{__SELF__}}::answer-comment': '#answer-comment'"
+    >
+    <h3>{{answer.name_html|raw}}</h3>
+    </a>
+    </li>
+{% endfor %}
+
+<div id="answer-comment">
+</div>
+
+<div id="question-comment">
+{% partial "@question-comment" %}
+</div>
+
+<br />
+
+{% if question.next %}
+<a id="next-question" class="btn btn-md btn-primary" style="display: none;"
+href="/question/{{ id }}/{{question.next}}">
+<h3>Nästa fråga</h3>
+</a>
+{% endif %}
+
+<script>
+function updateButtons(data, el)
+{
+    el.removeClass('btn-info');
+
+    if (data.answer_correct == '1') {
+        el.addClass('btn-success');
+        $('#next-question').fadeIn();
+    } else {
+        el.addClass('btn-danger');
+    }
+}
+</script>

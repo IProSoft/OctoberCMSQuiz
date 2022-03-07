@@ -1,0 +1,19 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+
+    quiz:
+
+        # Filter name
+        label: Quiz
+
+        # Model Class name
+        modelClass: Ips\Quiz\Models\Quiz
+
+        # Model attribute to display for the name
+        nameFrom: name
+
+        # Apply query scope
+        scope: FilterQuiz

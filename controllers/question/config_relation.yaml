@@ -1,0 +1,11 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+answers:
+    label: Odpowiedzi
+    emptyMessage: Dodaj odpowiedź do pytania tutaj
+    list: ~/plugins/ips/quiz/models/answer/columns.yaml
+    form: ~/plugins/ips/quiz/models/answer/fields.yaml
+    view:
+        showCheckboxes: true

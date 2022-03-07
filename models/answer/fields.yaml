@@ -1,0 +1,25 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    question:
+        label: 'Odpowiedź do pytania:'
+        type: relation
+        nameFrom: question
+    answer_text:
+        label: Odpowiedź
+    answer_image:
+            label: Obraz odpowiedzi
+            type: fileupload
+            mode: image
+            imageWidth: 800
+            thumbOptions:
+                mode: auto
+                quality: 90
+                interlace: false
+                extension: jpg
+    correct:
+        type: checkbox
+        label: Poprawna?
+

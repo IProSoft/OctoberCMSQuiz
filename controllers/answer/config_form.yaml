@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Answer
+
+# Model Form Field configuration
+form: $/ips/quiz/models/answer/fields.yaml
+
+# Model Class name
+modelClass: Ips\Quiz\Models\Answer
+
+# Default redirect location
+defaultRedirect: ips/quiz/answer
+
+# Create page
+create:
+    title: Utwórz odpowiedź
+    redirect: ips/quiz/answer/update/:id
+    redirectClose: ips/quiz/answer
+
+# Update page
+update:
+    title: Edytuj odpowiedź
+    redirect: ips/quiz/answer
+    redirectClose: ips/quiz/answer
+
+# Preview page
+preview:
+    title: Preview Answer
